@@ -1,0 +1,16 @@
+Questions:
+CAN I ASSIGN my own id to id?
+
+Where is the color associated with the category assigned?
+
+Submitter Id already exist across multiple tables and nodes….how does that work?
+If you have type integer it fails with:      ->     works with number, but it is not very specific
+"message": "'15' is not of type 'integer'",
+                "type": "INVALID_VALUE"
+Is there a way to have the fields ordered in the form instead of alphabetically?
+
+PROBLEM:
+ - uploading tsv files always timeout even with just 10 rows
+
+QUESTION:
+How can I use two different data dictionary for two different program-project at the same time
