@@ -1,0 +1,18 @@
+CONNECT TO DATABASE
+
+docker exec -it compose-services_postgres_1 bash
+ls
+psql -U postgres postgres
+ldt
+\l
+\c metadata_db 
+
+
+CLEAN DB
+docker volume ls
+docker volume rm compose-services_psqldata
+
+
+
+docker build -t windmill .
+docker image ls
