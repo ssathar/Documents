@@ -1,0 +1,27 @@
+
+DATA_DICTIONARY
+Git clone https://github.com/uc-cdis/datadictionary.git
+Edit/created your yams entities in datadictionary/gdcdictionary/schemas/
+Generate JSON through DICTIONATY_UTILS
+
+DICTIONARY_UTILS
+Git clone https://github.com/uc-cdis/dictionaryutils.git
+pip install -r dev-requirements.txt
+pip uninstall -y dictionaryutils 
+python setup.py install --force
+Execute python bin/dump_schema.py or whatever dump file you generated
+COPY the path of the file generated because it will be feed into GEN3
+Paste here or create environment variable:
+./apis_configs/sheepdog_settings.py:config['DICTIONARY_URL'] = environ.get('DICTIONARY_URL','https://s3.amazonaws.com/dictionary-artifacts/datadictionary/develop/schema.json')
+./apis_configs/peregrine_settings.py:config['DICTIONARY_URL'] = environ.get('DICTIONARY_URL','https://s3.amazonaws.com/dictionary-artifacts/datadictionary/develop/schema.json')
+
+DICTIONARY_URL: /Users/lgraglia/Projects/TEST/dictionaryutils/dump.json
+
+
+DICTIONARY VALIDATION:
+git clone https://github.com/uc-cdis/datadictionary
+cd datadictionary
+git clone https://github.com/uc-cdis/dictionaryutils
+python setup.py install --force
+cd dictionaryutils
+./run_tests.sh
