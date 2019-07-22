@@ -1,0 +1,25 @@
+
+Git clone https://github.com/uc-cdis/compose-services.git
+ON MAC: 
+[ v3_ca ]
+basicConstraints = critical,CA:TRUE
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid:always,issuer:always
+
+bash creds_setup.sh
+Create a google application to generate client_id and client_secret
+#TODO
+Use the google credentials in this file “apis_configs/fence_creds.json”
+Add your user “apis_configs/user.yaml”
+docker-compose up
+Go to ".../_root" and create a “program” form or upload a program json. 
+Go to “".../program_name" to create a project 
+filling out only:
+"name", "code", and "dbgap_accession_number". These three should be exactly the same string value.
+Don't enter anything under Programs. But if it gives an error again, try putting "test" for "Programs: submitter_id". Don't enter anything for "id" there.
+
+Go to “../program-project” an you can start uploading files of form
+
+SUBMISSION FILE DETAILS:
+Submitting the Json change SUBMITTED_ID with CODE
+
