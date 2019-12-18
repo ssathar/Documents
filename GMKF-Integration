@@ -1,4 +1,6 @@
 DATA SERVICE
   - https://kf-api-dataservice.kidsfirstdrc.org/
   - https://github.com/kids-first/kf-api-dataservice
-  
+
+RELEASE COORDINATOR
+  - https://github.com/kids-first/kf-api-release-coordinator
